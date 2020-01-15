@@ -1,0 +1,22 @@
+
+.header {
+	font-weight: 600;
+	font-size: 1.5vw;
+}
+.text {
+	font-weight: 600;
+	font-size: 1.1vw;
+	margin-bottom: 1vw;
+}
+table {
+  border-collapse: collapse;
+  border-color: #FFFFFF;
+  margin-left: 34%;
+}
+th {
+	border: 1px solid  #FFFFFF;
+}
+tr, td {
+  border: 1px solid #FFFFFF;
+}
+}

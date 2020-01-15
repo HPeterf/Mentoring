@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head th:include="head"></head>
+  <title>First Aid</title>
+  <body>
+  <div  th:replace="menu"></div>
+  <br>
+  <h2 class="header"> Welcome to EPAM First Aid Page!</h2>
+  <br>
+  <h2 class="header"> What can we do in case of an Ememrgency?</h2>
+  <br>
+  <div>
+  <h2 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h2>
+  </div>
+  <br>
+  <h2 class="header">People who can Help in Case of an Emergency</h2>
+  <br>
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Room Number</th>
+      <th>Availability</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>John Doe</td>
+      <td>102</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>Gregory House</td>
+      <td>203</td>
+      <td>Available</td>
+    </tr>
+      <td>Tony Stark</td>
+      <td>403</td>
+      <td>On vacation from 18 Nov 2019 to 11 Dec 2019</td>
+    </tr>
+    <tr th:each="listOfEmployees : ${listOfEmployees}">
+      <td th:text="${listOfEmployees.name}">name</td>
+      <td th:text="${listOfEmployees.location}">location</td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+  </body>

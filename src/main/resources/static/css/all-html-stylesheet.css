@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+    font-family: 'Oswald', cursive;
+    font-size: 1.3em;
+    background-color: rgba(204, 204, 204, 0.5);
+}
+
+.homepage {
+	float:left;
+	width: 50%;
+}

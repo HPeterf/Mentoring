@@ -1,0 +1,39 @@
+ul {
+    background-color: rgb(70, 69, 71);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li h1 {
+	float: left;
+    font-family: 'Oswald', cursive;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    margin-top: 1.3%;
+    padding-left: 1.5%;
+}
+li a{
+    display: block;
+    float: left;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Oswald', cursive;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin-left: 1.5%;
+    margin-top: 1.3%;
+    background-color: rgb(70, 69, 71);
+}
+li a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(70, 69, 71);
+}
+li img {
+    float: left;
+    margin-top: 1vw;
+    height: 2.5vw;
+    padding-left: 1.5%;
+}

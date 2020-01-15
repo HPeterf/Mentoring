@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<title>Register</title>
+<head th:include="head"></head>
+<body>
+  <div  th:replace="menu"></div>
+  <br>
+  <div class="welcome-message">
+    <h2 class="header">Register new FirstAider</h2>
+  </div>
+  <div class="message">
+    Please fill the requested form below
+  </div>
+<div class="registration-form">
+  <form id="employeeRegistrationForm" name="employeeRegistrationForm" th:action="@{/register}" th:object="${employee}" th:modelAttribute="employee"
+        th:method="POST">
+    <span class="employeereg">Employee name:</span><br>
+    <p id="userNameTakenMessage"></p>
+    <p id="errorMessage" th:text="${errorMessage != null}? ${errorMessage} : ''"/>
+    <div class="fieldErrorMessage" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Form Error</div>
+    <input class="member" type="text" name="comment" placeholder="Employee name" th:field="*{name}" /> <br>
+
+    <span class="employeereg">Employee location:</span><br>
+    <div class="fieldErrorMessage" th:if="${#fields.hasErrors('location')}" th:errors="*{location}">Form Error</div>
+    <input id="employee" class="member" type="text" name="comment" placeholder="Employee location" th:field="*{location}" /> <br>
+
+    <input type="submit"
+           name="register" class="input-button" value="REGISTER"></input>
+  </form>
+</div>
+</body>
+</html>
