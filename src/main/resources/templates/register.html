@@ -15,15 +15,15 @@
 <div class="registration-form">
   <form id="employeeRegistrationForm" name="employeeRegistrationForm" th:action="@{/register}" th:object="${employee}" th:modelAttribute="employee"
         th:method="POST">
-    <span class="employeereg">Employee name:</span><br>
+    <span class="employeereg">Employee name:</span>
     <p id="userNameTakenMessage"></p>
     <p id="errorMessage" th:text="${errorMessage != null}? ${errorMessage} : ''"/>
     <div class="fieldErrorMessage" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Form Error</div>
-    <input class="member" type="text" name="comment" placeholder="Employee name" th:field="*{name}" /> <br>
+    <input class="member" type="text" name="comment" placeholder="Employee name" th:field="*{name}" required="true"/> <br>
 
     <span class="employeereg">Employee location:</span><br>
     <div class="fieldErrorMessage" th:if="${#fields.hasErrors('location')}" th:errors="*{location}">Form Error</div>
-    <input id="employee" class="member" type="text" name="comment" placeholder="Employee location" th:field="*{location}" /> <br>
+    <input id="employee" class="member" type="text" name="comment" placeholder="Employee location" th:field="*{location}" required="true"/> <br>
 
     <input type="submit"
            name="register" class="input-button" value="REGISTER"></input>
