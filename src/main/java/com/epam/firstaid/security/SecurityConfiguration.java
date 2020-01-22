@@ -28,6 +28,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         .antMatchers("/register").hasAnyRole("ADMIN")
                 .and().formLogin().defaultSuccessUrl("/register")
                 .and()
+                .logout()
+                .logoutSuccessUrl("/index?logout")
+                .permitAll()
+                .and()
                 .formLogin().loginPage("/login")
 				.permitAll();
     }

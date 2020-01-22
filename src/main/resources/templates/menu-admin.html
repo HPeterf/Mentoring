@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <li><img src="/pictures/First-aid-icon.png"></img></li>
+  <li><h1>First Aid</h1></li>
+  <li>
+	<form sec:authorize="isAuthenticated()" id="frmlogout" th:action="@{/logout}" method="post" class="form-inline">
+		<a href="javascript:{}" onclick="document.getElementById('frmlogout').submit(); return false;">Log Out</a>
+	</form>
+   </li>
+</ul>

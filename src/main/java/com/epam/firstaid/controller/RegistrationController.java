@@ -56,7 +56,7 @@ public class RegistrationController {
           model.addAttribute("name", employee.getName());
           model.addAttribute("location", employee.getLocation());
 
-          redirect = new ModelAndView("redirect:/index", HttpStatus.CREATED);
+          redirect = new ModelAndView("redirect:/register?success", HttpStatus.CREATED);
 
         }
       }

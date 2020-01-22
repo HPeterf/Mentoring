@@ -17,6 +17,13 @@ body {
     color: red;
 }
 
+.logout-message {
+	text-align: center;
+    font-family: 'Oswald', cursive;
+    font-size: 1.3em;
+    color: #008080;
+}
+
 .input-button {
 	  background-color: #8080ff;
 	  border: none;

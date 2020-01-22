@@ -4,11 +4,14 @@
 <title>Register</title>
 <head th:include="head"></head>
 <body>
-  <div  th:replace="menu"></div>
+  <div  th:replace="menu-admin"></div>
   <br>
   <div class="welcome-message">
     <h2 class="header">Register new FirstAider</h2>
   </div>
+  
+  <div th:if="${param.success}" class="logout-message">FirstAider successfully registered<br>
+  Feel free to register another person</div>
   <div class="message">
     Please fill the requested form below
   </div>

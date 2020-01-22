@@ -7,12 +7,12 @@
 <form name="login" th:action="@{/login}" method="post" class="form-signin">
 			<h2 class="form-signin-heading">Please Sign In</h2>
 			<div id="err" th:if="${param.error}" class="alert-danger">Wrong username and/or password</div>
+			<div th:if="${param.logout}" class="alert alert-success">Logged out successfully</div>
 			<label for="username" class="sr-only">UserName</label> 
 			    <input type="text" id="username" name="username" class="form-control" placeholder="UserName" required="true" /><br> 
 			<label for="password" class="sr-only">Password</label>
 			    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="true" /><br> 
 			<button class="input-button" type="submit">Sign In</button>
 		</form>
-
     </body>
 </html>
